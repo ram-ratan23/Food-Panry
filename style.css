@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFA500;
+    width: 100vw;
+    padding: 0 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/*----- Header ------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.logo h1:first-child {
+    color: #777E67;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo h1:first-child span {
+    font-size: 15px;
+}
+
+.logo h2 {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1;
+    letter-spacing: .1em;
+    color: #480202;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #757F65;
+    margin: 15px;
+    font-family: 'Montserrat';
+    letter-spacing: normal;
+}
+
+.nav__heighlight button,
+.nav__heighlight__mob button {
+    width: 100px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 20px 0 20px 20px;
+    background-color: #757F65;
+    color: white;
+    padding: 5px 0;
+    margin: 10px;
+    box-shadow: 1px 3px 7px 1px rgb(68, 67, 67);
+    font-weight: 700;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.nav__heighlight__mob {
+    display: none;
+}
+
+.nav__heighlight .bg-trans,
+.nav__heighlight__mob .bg-trans {
+    color: #BC4600;
+    border: 1px solid #BC4600;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.nav-btn i {
+    color: #BC4600;
+    cursor: pointer;
+}
+
+
+/* ----- main ------ */
+
+main {
+    margin: 1% 10%;
+}
+
+main h1 {
+    text-align: center;
+    color: #757F65;
+    font-weight: 1000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.grid {
+    width: 350px;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.grid h3 {
+    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+@media only screen and (min-width: 1850px) {
+    .grid-container {
+        width: 50vw;
+    }
+}
+
+
+/* ---- foooter ------- */
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    width: 60vw;
+}
+
+.links i {
+    color: #757F65;
+    margin: 10px;
+}
+
+
+/* ----- Tablet version ------ */
+
+@media only screen and (max-width: 1310px) {
+    .logo strong {
+        font-size: 50px;
+    }
+    .E {
+        float: right;
+    }
+    body {
+        height: auto;
+    }
+    .nav,
+    .logo span {
+        display: none;
+    }
+    .nav__heighlight {
+        width: 130px;
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+    .nav__heighlight .bg-trans {
+        border: 5px solid #BC4600;
+    }
+    .grid-container {
+        width: 80vw;
+    }
+}
+
+
+/* ------ mobile version ----- */
+
+@media only screen and (max-width: 950px) {
+    body {
+        height: auto;
+        width: 90vw;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    header {
+        width: 80vw;
+    }
+    .nav-btn i {
+        font-size: 30px;
+        float: left;
+    }
+    .nav,
+    .logo span,
+    .nav__heighlight {
+        display: none;
+    }
+    .logo {
+        font-size: 10px;
+    }
+    .nav__heighlight__mob {
+        width: 40vw;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+    }
+    .nav__heighlight__mob .bg-trans {
+        border: 5px solid #BC4600;
+    }
+    main {
+        margin: 0;
+    }
+    main h1 {
+        width: 80vw;
+        font-size: 25px;
+    }
+}
